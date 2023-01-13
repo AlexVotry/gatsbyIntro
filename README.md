@@ -58,3 +58,8 @@ Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cl
 - *gatsby-plugin-image:*  Plugin to add responsive images to your site
 - *gatsby-plugin-sharp:*  Handles the actual image processing that is used bygatsby-plugin-image.
 - *gatsby-source-filesystem:*  Lets you pull in data from your computer’s filesystem
+
+**graphql**
+
+To pull data into a “building block” component, use the useStaticQuery hook (components/seo.js).
+To pull data into a page component, use a page query. (pages/blog.js)
