@@ -6,12 +6,19 @@ import Seo from '../components/seo';
 const BlogTitle = "My Blog Posts"
 const BlogPage = ({data}) => {
   
-  const allPosts = data.allFile.nodes;
-  const posts = allPosts.map(post => (
-    <li key={post.name}>
-      {post.name}
-    </li>
-  ));
+  const allPosts = data.allMdx.nodes;
+  console.log('allposts:', allPosts);
+
+  const posts = allPosts.map(({ frontmatter, id, excerpt }) => {
+    const {title, date, slug } = frontmatter;
+    return (
+      <article key={id}>
+        <h2>{title}</h2>
+        <p>Posted: {date}</p>
+        <p>{excerpt}</p>
+      </article>
+    )
+  });
 
   return (
     <Layout pageTitle={BlogTitle}>
@@ -24,9 +31,15 @@ const BlogPage = ({data}) => {
 
 export const query = graphql`
   query {
-    allFile(filter: {sourceInstanceName: {eq: "blog"}}) {
+   allMdx(sort: {frontmatter: {date: DESC}}) {
     nodes {
-      name
+      frontmatter {
+        title
+        date(formatString: "MMMM D, YYYY")
+        slug
+      }
+      id
+      excerpt
     }
   }
   }
