@@ -52,3 +52,9 @@
 Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
 
 [<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+
+**plugins:**
+
+- *gatsby-plugin-image:*  Plugin to add responsive images to your site
+- *gatsby-plugin-sharp:*  Handles the actual image processing that is used bygatsby-plugin-image.
+- *gatsby-source-filesystem:*  Lets you pull in data from your computer’s filesystem
