@@ -47,22 +47,20 @@
 
     - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
 
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+## Notes on the code:
 
 **plugins:**
 
 - *gatsby-plugin-image:*  Plugin to add responsive images to your site
-- *gatsby-plugin-sharp:*  Handles the actual image processing that is used bygatsby-plugin-image.
+- *gatsby-plugin-sharp:*  Handles the actual image processing that is used by gatsby-plugin-image.
+- *gatsby-transformer-sharp:* Same as above but for gatsbyImage.
 - *gatsby-source-filesystem:*  Lets you pull in data from your computer’s filesystem
+- *gatsby-plugin-mdx:* Lets you read mdx files, adds mdx in the graphql
 
-**graphql**
+[**graphql**](https://www.gatsbyjs.com/docs/tutorial/part-4/)
 
-To pull data into a “building block” component, use the useStaticQuery hook (components/seo.js).
-To pull data into a page component, use a page query. (pages/blog/index.js)
+- To pull data into a “building block” component, use the useStaticQuery hook (components/seo.js).
+- To pull data into a page component, use a page query. (pages/blog/index.js)
 
 [**Image**](https://www.gatsbyjs.com/docs/tutorial/part-7/#whats-the-difference-between-gatsbyimage-and-staticimage)
 
