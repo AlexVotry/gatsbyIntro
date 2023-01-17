@@ -1,7 +1,6 @@
 // Step 1: Import React
 import * as React from "react";
 import Layout from "../components/layout";
-import Seo from "../components/seo";
 
 // Step 2: Define your component
 const AboutPage = () => {
@@ -23,6 +22,7 @@ export const Head = () => (
 );
 //  exporting this named function inside a component like Layout won’t add the metadata to the <head>. 
 // The above works because you’re exporting Head in a page inside src/pages
+
 
 // Step 3: Export your component
 export default AboutPage;

@@ -62,4 +62,11 @@ Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cl
 **graphql**
 
 To pull data into a “building block” component, use the useStaticQuery hook (components/seo.js).
-To pull data into a page component, use a page query. (pages/blog.js)
+To pull data into a page component, use a page query. (pages/blog/index.js)
+
+[**Image**](https://www.gatsbyjs.com/docs/tutorial/part-7/#whats-the-difference-between-gatsbyimage-and-staticimage)
+
+- The *StaticImage* component is for static image sources, like a hard-coded file path or remote URL. In other words, the source for your image is always going to be the same every time the component renders. (pages/index.js)
+- The *GatsbyImage* component is for dynamic image sources, like if the image source gets passed in as a prop. (blog/{mdx.frontmatter__slug})
+
+essentially use the *GatsbyImage* when you are passing the image as a variable. It may be a different picture depending on the data.
